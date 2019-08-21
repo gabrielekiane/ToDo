@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    height: 100%;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 3 rem;
+    font-weight: 50;
+    margin: 1rem 0 3rem;
+    text-align: center;
+    color: black;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.styling {
+    font-weight: 800;
+    color: #0072c6;
+}
+
+.input_div .input {
+    padding: 0.5rem 1rem;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: black;
+    width: 450px;
+    font-size: 1.15rem;
+    margin: 0.25rem;
+    border-radius: 15px;
+}
+
+.input {
+    text-align: center;
+    color: white;
+}
+.addButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: black;
+    margin: 0.25rem;
+    background-color: #0072c6; 
+    cursor: pointer;
+}
+
+.addButton:hover {
+    opacity: 0.7;
+    box-shadow: 10px 5px 5px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.item {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #0072c6;
+}
+
+.item_input {
+    background: none;
+    outline: none;
+    color: black;
+    border: none;
+    width: 350px;
+    font-size: 1.4rem;
+}
+
+.editButton {
+    font-size: 1.4rem;
+    margin: 0 0.2rem;
+    font-family: 'Hind Siliguri', sans-serif;
+    background: none;
+    outline: none;
+    color: #0063ad;
+    border: none;
+    cursor: pointer;
+}
+
+.removeButton {
+    font-size: 1.4rem;
+    margin: 0 0.2rem;
+    font-family: 'Hind Siliguri', sans-serif;
+    background: none;
+    outline: none;
+    color: #FF6B6B;
+    border: none;
+    cursor: pointer;
+}

@@ -9,7 +9,14 @@
         <link rel="stylesheet" type="text/css" href="style.css"> 
         <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
     </head>
-    <body>
+    
+    <body onload="loadLocalStorageItems()">
+        <h1><span class="styling">ToDo</span>List</h1>
+        <div class="input_div">
+            <input class="input" type="text" placeholder="What do you want to do?">
+            <button class="addButton"><i class="fas fa-plus"></i></button>
+        </div>
+        
         <div class="container">
             <h1>Daily <span class="styling">Tasks</span></h1>
             <div class="input_div">

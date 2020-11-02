@@ -2,14 +2,32 @@ const addButton = document.querySelector('.addButton');
 var input = document.querySelector('.input');
 const container = document.querySelector('.container');
 
-class item {
-    constructor(itemName){
-        // create the idem div
-        this.createDiv(itemName);
+function setLocalStorageItem(item) {
+    const othersItems = localStorage.getItem('To:Do-items');
+    let items = [];
+
+    if(othersItems) {
+        items =  JSON.parse(othersItems);
     }
 
-    createDiv(itemName){
+    items.push(item);
+
+    localStorage.setItem('To:Do-items', JSON.stringify(items));
+}
+
+class Item {
+    constructor(itemName, save = true){
+        // create the idem div
+        this.createDiv(itemName, save);
+    }
+
+    createDiv(itemName, save){
+        if (save) {
+            setLocalStorageItem(itemName);
+        }
+        
         let input = document.createElement('input');
+        input.id = itemName;
         input.value = itemName;
         input.disabled = true;
         input.classList.add('item_input');
@@ -37,17 +55,32 @@ class item {
     }
 
     edit(input){
+        const items = JSON.parse(localStorage.getItem('To:Do-items'));
+        const itemIndex = items.indexOf(input.id);
+
+        if (!input.disabled) {
+            items[itemIndex] = input.value;
+            localStorage.setItem('To:Do-items', JSON.stringify(items));
+        }
+
         input.disabled = !input.disabled;
     }
 
     remove(item){
+        const items = JSON.parse(localStorage.getItem('To:Do-items'));
+        const itemIndex = items.indexOf(item);
+
         container.removeChild(item);
+
+        items.splice(itemIndex);
+
+        localStorage.setItem('To:Do-items', JSON.stringify(items));
     }
 }
 
 function check() {
     if (input.value != "") {
-        new item(input.value);
+        new Item(input.value);
         input.value = "";
     }
 }
@@ -58,3 +91,11 @@ window.addEventListener('keydown', (e) => {
         check();
     }
 })
+
+function loadLocalStorageItems() {
+    const items = JSON.parse(localStorage.getItem('To:Do-items'));
+    
+    items.forEach(item => {
+        new Item(item, false);
+    });
+}

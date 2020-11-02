@@ -14,7 +14,9 @@
         <div class="container">
             <h1>Daily <span class="styling">Tasks</span></h1>
             <div class="input_div">
-                <input class="input" type="text" onfocus="this.value=''" value="What do you want to do?">
+                <input class="input" type="text" placeholder="What do you want to do?" 
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'What do you want to do?'" />
                 <button class="addButton"><i class="fas fa-plus"></i></button>
             </div>
         </div>

@@ -6,31 +6,51 @@
 }
 
 body {
-    height: 100%;
-    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #d9a7c7, #fffcdc);
+}
+
+.container {
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem auto;
+    box-shadow:  7px 7px 14px #ffe5e59e, 
+    1px 7px 12px gray;
 }
 
 h1 {
     font-size: 3 rem;
     font-weight: 50;
-    margin: 1rem 0 3rem;
+    margin: 2rem;
     text-align: center;
-    color: black;
+    color: #445566;
     font-family: 'Hind Siliguri', sans-serif;
 }
 
 .styling {
     font-weight: 800;
-    color: #0072c6;
+    color: #d9a7c7;
 }
+
+.input_div { margin-bottom: 2rem; }
 
 .input_div .input {
     padding: 0.5rem 1rem;
     height: 50px;
     outline: none;
     border: none;
-    background-color: black;
-    width: 450px;
+    border-radius: 51px;
+    border-radius: 51px;
+    border-radius: 31px;
+    border-radius: 31px;
+    background: #ffffff;
+    box-shadow:  6px 6px 19px #e0e3e8, 
+            -6px -6px 19px #ffffff;
+    width: 60%;
     font-size: 1.15rem;
     margin: 0.25rem;
     border-radius: 15px;
@@ -38,7 +58,7 @@ h1 {
 
 .input {
     text-align: center;
-    color: white;
+    color: #445566;
 }
 .addButton {
     height: 50px;
@@ -46,19 +66,18 @@ h1 {
     border-radius: 25px;
     outline: none;
     border: none;
-    background-color: black;
-    color: black;
+    color: white;
     margin: 0.25rem;
-    background-color: #0072c6; 
+    background-color: #d9a7c7; 
     cursor: pointer;
 }
 
 .addButton:hover {
-    opacity: 0.7;
-    box-shadow: 10px 5px 5px black;
+    opacity: 0.8;
+    box-shadow: 10px 5px 5px #fffcdc;
 }
 
-.container {
+.container-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,36 +89,96 @@ h1 {
 .item {
     padding: 0.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 4px solid #0072c6;
+    display: flex;
+    align-self: center;
+    width: 65%;
+    border-bottom: 2px solid #e0e3e8;
 }
 
 .item_input {
     background: none;
     outline: none;
-    color: black;
+    color: #445566;
     border: none;
     width: 350px;
     font-size: 1.4rem;
 }
 
 .editButton {
+    width: 20%;
     font-size: 1.4rem;
     margin: 0 0.2rem;
     font-family: 'Hind Siliguri', sans-serif;
-    background: none;
+    background: #8BB6C4;
     outline: none;
-    color: #0063ad;
+    color: #ffffff;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
 }
 
+.editButton:hover {
+    opacity: 0.8;
+}
+
 .removeButton {
+    width: 20%;
     font-size: 1.4rem;
     margin: 0 0.2rem;
     font-family: 'Hind Siliguri', sans-serif;
-    background: none;
     outline: none;
-    color: #FF6B6B;
-    border: none;
     cursor: pointer;
+    background-color: #ec7a7a;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
 }
+
+.removeButton:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .editButton, .removeButton {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .container { 
+        height: 100vh;
+    }
+
+    h1 { 
+        margin-top: -13rem; 
+    }
+
+    .item {
+        width: 70%;
+    }
+
+    .input_div .input { 
+        font-size: 1rem; 
+    }
+
+    .item_input {
+        margin-left: -3rem;
+        font-size: 0.8rem;
+    }
+
+    .addButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .editButton, .removeButton {
+        font-size: 0.6rem;
+        padding: 0 2rem 0 1rem;
+        margin-left: -2rem;
+    }
+
+    .removeButton {
+        margin-left: 0;
+    }
+}
+

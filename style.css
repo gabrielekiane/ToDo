@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.example {
+.container {
     -ms-overflow-style: none;
     scrollbar-width: none; 
   }
@@ -55,7 +55,7 @@ h1 {
     height: 50px;
     background: white;
     box-sizing: border-box;
-    border-radius: 25px;
+    border-radius: 15px;
     border: 5px solid white;
     box-shadow:  6px 6px 19px #e0e3e8, 
     -6px -6px 19px #ffffff;

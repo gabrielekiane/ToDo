@@ -1,4 +1,4 @@
-const addButton = document.querySelector('.addButton');
+const addButton = document.querySelector('.fas');
 var input = document.querySelector('.input');
 const container = document.querySelector('.container');
 

@@ -23,7 +23,7 @@ class item {
         editButton.classList.add('editButton');
 
         let removeButton = document.createElement('button');
-        removeButton.innerHTML = "REMOVE";
+        removeButton.innerHTML = "DEL";
         removeButton.classList.add('removeButton');
 
         container.appendChild(itemBox);

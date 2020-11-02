@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 
 .container {
     width: 80vw;
-    background-color:   #f1f1f1;
+    background-color:   white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -83,7 +83,7 @@ h1 {
     top: 0;
     right: 0;
     border-radius: 50%;
-    background: #d192ba;
+    background:  linear-gradient(to right, #d192b2, #fab6fd);
     color: white;
     text-align: center;
     font-size: 1.2em;
@@ -100,8 +100,12 @@ h1 {
 }
 
 .input_div:hover .fas{
-    background: #d192ba; 
+    background: linear-gradient(to right, #d192b2, #fab6fd); 
     color: white;
+}
+
+.input_div:hover .fas:active{
+    background: linear-gradient(to right, #ce80ba, #f5a0fa);
 }
   
 /* Itens do To-Do */
@@ -138,7 +142,7 @@ h1 {
     font-size: 1.4rem;
     margin: 0 0.2rem;
     font-family: 'Hind Siliguri', sans-serif;
-    background: #8BB6C4;
+    background: linear-gradient(to right top, #35dfa6, #35dfba,  #2ecfac, #2ecfac, #35dfdf);
     outline: none;
     color: #ffffff;
     border: none;
@@ -150,6 +154,11 @@ h1 {
     opacity: 0.8;
 }
 
+.editButton:active{
+   background: linear-gradient(to right top, #35df76, #35df8a,  #2ecf84, #2ecfac, #35dfac);
+   opacity: 1;
+}
+
 .removeButton {
     width: 20%;
     font-size: 1.4rem;
@@ -157,15 +166,21 @@ h1 {
     font-family: 'Hind Siliguri', sans-serif;
     outline: none;
     cursor: pointer;
-    background-color: #ec7a7a;
+    background-image: linear-gradient(to right top, #f7204b, #f72843, #f7303a, #f63831, #f43f27);
     color: #ffffff;
     border: none;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .removeButton:hover {
-    opacity: 0.8;
+    opacity: 0.8;   
 }
+
+.removeButton:active{
+    background: linear-gradient(to right top, #f7202b, #f72828, #f73030, #f64f31, #f43527);
+    opacity: 1;
+ }
 
 /* Responsividade */
 

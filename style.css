@@ -11,6 +11,15 @@ body {
     background-image: linear-gradient(to right, #d9a7c7, #fffcdc);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+
 .container {
     width: 80vw;
     background-color: white;

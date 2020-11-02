@@ -2,8 +2,7 @@
 
 <html>
     <head>
-        <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/e3534951f6.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ToDo List</title>
@@ -12,6 +11,7 @@
     </head>
     
     <body onload="loadLocalStorageItems()">
+        
         <div class="container">
             <h1>Daily <span class="styling">Tasks</span></h1>
 
@@ -19,11 +19,8 @@
                 <input class="input" type="text" placeholder="What do you want to do?" 
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'What do you want to do?'" />
-                <button class="addButton">
                     <i class="fas fa-plus"></i>
-                </button>
             </div>
-            
         </div>
             
         <div class="container-list">

@@ -16,11 +16,6 @@ body::-webkit-scrollbar {
 }
 
 .container {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-  }
-
-.container {
     width: 80vw;
     background-color:   #f1f1f1;
     display: flex;
@@ -29,6 +24,8 @@ body::-webkit-scrollbar {
     margin: 2rem auto;
     box-shadow:  7px 7px 14px #ffe5e59e, 
     1px 7px 12px gray;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 h1 {
@@ -55,11 +52,11 @@ h1 {
     height: 50px;
     background: white;
     box-sizing: border-box;
-    border-radius: 15px;
+    border-radius: 25px;
     border: 5px solid white;
     box-shadow:  6px 6px 19px #e0e3e8, 
-    -6px -6px 19px #ffffff;
-    padding: 5px;
+    -6px -6px 19px white;
+    padding: 21px;
 }
 
 .input{
@@ -86,10 +83,16 @@ h1 {
     top: 0;
     right: 0;
     border-radius: 50%;
-    color: #445566;
+    background: #d192ba;
+    color: white;
     text-align: center;
     font-size: 1.2em;
-    transition: all 0.5s;
+    transition: all 0.1s;
+}
+
+.input_div:hover{
+    width: 300px;
+    cursor: pointer;
 }
 
 .input_div:hover .input{
@@ -100,12 +103,7 @@ h1 {
     background: #d192ba; 
     color: white;
 }
-
-.input_div:hover {
-    width: 300px;
-    cursor: pointer;
-}
-
+  
 /* Itens do To-Do */
 
 .container-list {
@@ -204,6 +202,7 @@ h1 {
         height: 40px;
     }
 
+    /* botões dos itens da lista */ 
     .editButton, .removeButton {
         font-size: 0.6rem;
         padding: 0 2rem 0 1rem;

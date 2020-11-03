@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 
 .container {
     width: 80vw;
-    background-color:   white;
+    background-color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -44,7 +44,6 @@ h1 {
 
 .input_div { 
     position: relative;
-    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.5s;
@@ -63,7 +62,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;;
+    width: 100%;
     height: 42.5px;
     line-height: 30px;
     outline: 0;
@@ -91,7 +90,7 @@ h1 {
 }
 
 .input_div:hover{
-    width: 300px;
+    width: 65%;
     cursor: pointer;
 }
 
@@ -196,7 +195,13 @@ h1 {
     }
 
     h1 { 
+        font-size: 1.8rem;
         margin-top: -13rem; 
+    }
+
+    .fas {
+        width: 40px;
+        height: 40px;
     }
 
     .item {
@@ -204,7 +209,12 @@ h1 {
     }
 
     .input_div .input { 
-        font-size: 1rem; 
+        font-size: 0.7rem;
+        text-align: initial; 
+    }
+
+    .input_div:hover{
+        width: 80%;
     }
 
     .item_input {

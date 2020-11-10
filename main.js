@@ -6,8 +6,8 @@ function setLocalStorageItem(item) {
     const othersItems = localStorage.getItem('To:Do-items');
     let items = [];
 
-    if(othersItems) {
-        items =  JSON.parse(othersItems);
+    if (othersItems) {
+        items = JSON.parse(othersItems);
     }
 
     items.push(item);
@@ -16,16 +16,16 @@ function setLocalStorageItem(item) {
 }
 
 class Item {
-    constructor(itemName, save = true){
+    constructor(itemName, save = true) {
         // create the idem div
         this.createDiv(itemName, save);
     }
 
-    createDiv(itemName, save){
+    createDiv(itemName, save) {
         if (save) {
             setLocalStorageItem(itemName);
         }
-        
+
         let input = document.createElement('input');
         input.id = itemName;
         input.value = itemName;
@@ -50,23 +50,33 @@ class Item {
         itemBox.appendChild(editButton);
         itemBox.appendChild(removeButton);
 
-        editButton.addEventListener('click', () => this.edit(input));
+        input.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter'){
+                e.preventDefault();
+                this.edit(input, editButton);
+            };
+        });
+        editButton.addEventListener('click', () => this.edit(input, editButton));
         removeButton.addEventListener('click', () => this.remove(itemBox));
     }
 
-    edit(input){
+    edit(input, editButton) {
         const items = JSON.parse(localStorage.getItem('To:Do-items'));
         const itemIndex = items.indexOf(input.id);
 
         if (!input.disabled) {
             items[itemIndex] = input.value;
             localStorage.setItem('To:Do-items', JSON.stringify(items));
+            editButton.innerHTML = "EDIT"
+        } else {
+            editButton.innerHTML = "OK"
         }
 
         input.disabled = !input.disabled;
+
     }
 
-    remove(item){
+    remove(item) {
         const items = JSON.parse(localStorage.getItem('To:Do-items'));
         const itemIndex = items.indexOf(item);
 
@@ -87,14 +97,14 @@ function check() {
 
 addButton.addEventListener('click', check);
 window.addEventListener('keydown', (e) => {
-    if (e.which == 13){
+    if (e.which == 13) {
         check();
     }
 })
 
 function loadLocalStorageItems() {
     const items = JSON.parse(localStorage.getItem('To:Do-items'));
-    
+
     items.forEach(item => {
         new Item(item, false);
     });
